@@ -14,10 +14,10 @@
                                  :text "Button 2"
                                  :command (lambda () (format t "Button2~%")))))
         (pack f)
-        (pack b1 :side :left)
+        (pack b1 :side :right)
         (pack b2 :side :left)
-        (configure f :borderwidth 3)
-        (configure f :relief :sunken))))
+        (configure f :borderwidth 10)
+        (configure f :relief :flat))))
 
 (hello-2)
 
