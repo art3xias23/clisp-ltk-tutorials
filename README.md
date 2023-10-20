@@ -17,6 +17,7 @@ Based on the first two digits from the *.lisp files you can find:
   ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/7a769f41-cd55-4e78-b1eb-ff9ccb460c2c)
 
 7. Event Handling of Mouse Events inside label
+
    ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/6aca2625-e959-4336-b804-56f07d8cb848)
 
 
