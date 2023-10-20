@@ -21,6 +21,7 @@ Based on the first two digits from the *.lisp files you can find:
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/6aca2625-e959-4336-b804-56f07d8cb848)
 
 8. Frames with design and padding
+
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/dd860d69-e5e7-4239-9fe7-57c9f435faf0)
 
 20. A to-do list application. 
