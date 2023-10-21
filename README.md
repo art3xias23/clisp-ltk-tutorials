@@ -30,6 +30,11 @@ Based on the first two digits from the *.lisp files you can find:
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/c20a0930-c34a-4057-947f-66d142eee7e5)
 -----
 
+10. Buttons, images
+
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/f0ebd318-e4a9-4592-ba42-fa86e85e8deb)
+-----
+
 20. A to-do list application. 
  - Adding Tasks
  - Marking them as done
