@@ -38,6 +38,11 @@ Based on the first two digits from the *.lisp files you can find:
 
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/5aaffb5b-774e-4c9c-b711-64bcc2c55e1a)
 ------
+12. Entries
+
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/576973b1-5fa6-4dab-b5ef-9422c32ddba6)
+------
+
 
 20. A to-do list application. 
  - Adding Tasks
