@@ -47,6 +47,13 @@ Based on the first two digits from the *.lisp files you can find:
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/129fb320-3e7b-4e27-817b-3806217a53dc)
 ------
 
+14. Geometry Manager
+
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/7b6565b1-f0cf-4503-bdb8-be6ddfd7e34a)
+
+If you are interested in how the styling was made, there is an incremental excalidraw list here
+
+
 
 
 20. A to-do list application. 
