@@ -1,6 +1,6 @@
-# Lisp tutorials from
+# Lisp Toolkit tutorials
 - http://www.peter-herth.de/ltk/
-- via https://peterlane.codeberg.page/ltk-examples/
+- https://peterlane.codeberg.page/ltk-examples/
 
 Based on the first two digits from the *.lisp files you can find:
 
@@ -15,7 +15,6 @@ Based on the first two digits from the *.lisp files you can find:
 6. Radio Button Console Log Value Example
    
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/4b3aa0a1-2457-4014-8999-2fff18b5b30a)
-
 ------
 7. Event Handling of Mouse Events inside label
 
@@ -34,6 +33,11 @@ Based on the first two digits from the *.lisp files you can find:
 
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/f0ebd318-e4a9-4592-ba42-fa86e85e8deb)
 -----
+
+11. Check-boxes (buttons)
+
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/5aaffb5b-774e-4c9c-b711-64bcc2c55e1a)
+------
 
 20. A to-do list application. 
  - Adding Tasks
