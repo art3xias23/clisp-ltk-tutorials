@@ -12,9 +12,10 @@ Based on the first two digits from the *.lisp files you can find:
    
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/fdf64b7c-344c-4c65-b569-4b261c4f1db0)
 -----
-6. Radio Button Console Log Example
+6. Radio Button Console Log Value Example
    
-![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/7a769f41-cd55-4e78-b1eb-ff9ccb460c2c)
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/4b3aa0a1-2457-4014-8999-2fff18b5b30a)
+
 ------
 7. Event Handling of Mouse Events inside label
 
