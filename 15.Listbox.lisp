@@ -24,7 +24,9 @@
      (let*
          ((pos (get-position item elements)))
        (if pos
-           (listbox-select lb pos)
+           (progn 
+             (listbox-clear lb)
+             (listbox-append lb item))
            (progn
              (listbox-clear lb)
              (listbox-append lb "Could not find item")))))
