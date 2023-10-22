@@ -14,12 +14,16 @@
 
   (with-ltk()
     (wm-title *tk* "Example listbox")
-    (let ((countries-listbox (make-instance 'scrolled-listbox)))
+    (let ((countries-listbox (make-instance 'scrolled-listbox))
+          (country-seleciton (make-instance 'label
+                                            :text "")))
       (grid countries-listbox 0 0 :rowspan 5)
-
+      (grid (make-instance 'label
+                           :text "Country selected: ")0 1)
+      (grid country-seleciton 1 1)
       (listbox-append countries-listbox *country-names*)
 
-      (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (format t "Selection is ~a~%" (nth (first (listbox-get-selection countries-listbox)) *country-names*)))))))
+      (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (setf (text country-seleciton)  (nth (first (listbox-get-selection countries-listbox)) *country-names*)))))))
 
 (func)
 
