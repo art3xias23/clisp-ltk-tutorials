@@ -20,6 +20,12 @@
      (format t "Selected position is: ~d~%" pos)
     (listbox-select lb pos)))
 
+ (defun highlight-skip-one-item (lb items)
+   (dotimes(i (length items))
+       (when (evenp i)
+         (listbox-configure (listbox lb) i :background "#f0f0ff"))))
+           
+
  (with-ltk()
    (wm-title *tk* "Example listbox")
    (let* ((countries-listbox (make-instance 'scrolled-listbox))
@@ -35,7 +41,8 @@
      (grid button-1 4 1)
      (listbox-append countries-listbox *country-names*)
 
-     (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (setf (text country-seleciton)  (nth (first (listbox-get-selection countries-listbox)) *country-names*)))))))
+     (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (setf (text country-seleciton)  (nth (first (listbox-get-selection countries-listbox)) *country-names*))))
+     (highlight-skip-one-item countries-listbox *country-names*))))
 
 (func)
 
