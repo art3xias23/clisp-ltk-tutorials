@@ -20,6 +20,19 @@
      (format t "Selected position is: ~d~%" pos)
     (listbox-select lb pos)))
 
+ (defun hard-search(item elements lb)
+     (let*
+         ((pos (get-position item elements)))
+       (if pos
+           (listbox-select lb pos)
+           (progn
+             (listbox-clear lb)
+             (listbox-append lb "Could not find item")))))
+
+ (defun get-position(item elements)
+     (let ((pos (position (string-downcase item) (mapcar #'string-downcase elements) :test #'string=)))
+       pos))
+
  (defun highlight-skip-one-item (lb items)
    (dotimes(i (length items))
        (when (evenp i)
@@ -47,16 +60,16 @@
           (dynamic-search-label (make-instance 'label
                                                :text "Dynamic Search"
                                                :master dynamic-frame))
-          (hard-search-button (make-instance 'button
-                                             :master hard-frame
-                                             :command (lambda() (hard-search))))
-          (dynamic-search-button (make-instance 'button
-                                                :master dynamic-frame
-                                                :command (lambda() (dynamic-search))))
           (hard-search-entry (make-instance 'entry
                                             :master hard-frame))
           (dynamic-search-entry (make-instance 'entry
-                                               :master dynamic-frame)))
+                                               :master dynamic-frame))
+          (hard-search-button (make-instance 'button
+                                             :master hard-frame
+                                             :command (lambda() (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox)))))
+          (dynamic-search-button (make-instance 'button
+                                                :master dynamic-frame
+                                                :command (lambda() (dynamic-search)))))
      (grid frame 0 0)
      (grid selection-frame 0 1 :rowspan 3 :padx 10 :pady 10)
      (grid hard-frame 0 2 :rowspan 3 :padx 10 :pady 10)
