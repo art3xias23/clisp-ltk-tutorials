@@ -108,6 +108,10 @@
 
      (bind dynamic-search-entry "<Key>" (lambda(evt) (dynamic-search (text dynamic-search-entry) (listbox countries-listbox) *country-names*)))
 
+     (bind hard-search-entry "<Key>" (lambda(evt) (when (= (length (text hard-search-entry)) 0)
+                                                    (progn
+                                                      (listbox-clear (listbox countries-listbox))
+                                                      (listbox-append (listbox countries-listbox) *country-names*)))))
      (highlight-skip-one-item countries-listbox *country-names*))))
 
 (func)
