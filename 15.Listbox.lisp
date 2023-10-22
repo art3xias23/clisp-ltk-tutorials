@@ -97,6 +97,9 @@
      (grid-rowconfigure selection-frame 3 :weight 3)
 
      (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (setf (text country-seleciton)  (nth (first (listbox-get-selection countries-listbox)) *country-names*))))
+
+     (bind hard-search-entry "<KeyPress-Return>" (lambda(evt) (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox))))
+
      (highlight-skip-one-item countries-listbox *country-names*))))
 
 (func)
