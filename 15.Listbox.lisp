@@ -31,6 +31,17 @@
              (listbox-clear lb)
              (listbox-append lb "Could not find item")))))
 
+ (defun dynamic-search(sub lb items)
+   (listbox-clear lb)
+   (listbox-append lb (remove-if-not (lambda(item) (contains-string sub item)) items)))
+
+ (defun contains-string (sub str)
+   (not (null (search (string-downcase sub) (string-downcase str)))))
+
+ (defun return-matching-item(sub str)
+     (when (search sub str)
+       str))
+
  (defun get-position(item elements)
      (let ((pos (position (string-downcase item) (mapcar #'string-downcase elements) :test #'string=)))
        pos))
@@ -72,11 +83,7 @@
           (hard-search-button (make-instance 'button
                                       :master hard-frame
                                       :text "Search"
-                                      :command (lambda() (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox)))))
-          (dynamic-search-button (make-instance 'button
-                                                :master dynamic-frame
-                                                :text "Search"
-                                                :command (lambda() (dynamic-search)))))
+                                      :command (lambda() (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox))))))
      (grid frame 0 0)
      (grid selection-frame 0 1 :rowspan 3 :padx 10 :pady 10)
      (grid hard-frame 0 2 :rowspan 3 :padx 10 :pady 10)
@@ -89,7 +96,6 @@
      (grid hard-search-entry  1  2 :pady 10)
      (grid dynamic-search-entry  1  3 :pady 10)
      (grid hard-search-button  2  2)
-     (grid dynamic-search-button  2  3)
      (listbox-append countries-listbox *country-names*)
      (configure selection-frame :relief :raised :borderwidth 2)
      (configure hard-frame :relief :raised :borderwidth 2)
@@ -99,6 +105,8 @@
      (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (setf (text country-seleciton)  (nth (first (listbox-get-selection countries-listbox)) *country-names*))))
 
      (bind hard-search-entry "<KeyPress-Return>" (lambda(evt) (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox))))
+
+     (bind dynamic-search-entry "<Key>" (lambda(evt) (dynamic-search (text dynamic-search-entry) (listbox countries-listbox) *country-names*)))
 
      (highlight-skip-one-item countries-listbox *country-names*))))
 
