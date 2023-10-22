@@ -53,6 +53,9 @@
                                         :master frame))
           (countries-listbox (make-instance 'scrolled-listbox 
                                             :master frame))
+          (country-selection-label (make-instance 'label
+                                            :text "Country selected: "
+                                            :master selection-frame))
           (country-seleciton (make-instance 'label
                                             :text ""
                                             :master selection-frame))
@@ -60,27 +63,27 @@
                                             :text "Hard Search"
                                             :master hard-frame))
           (dynamic-search-label (make-instance 'label
-                                               :text "Dynamic Search"
-                                               :master dynamic-frame))
+                                        :text "Dynamic Search"
+                                        :master dynamic-frame))
           (hard-search-entry (make-instance 'entry
                                             :master hard-frame))
           (dynamic-search-entry (make-instance 'entry
-                                               :master dynamic-frame))
+                                        :master dynamic-frame))
           (hard-search-button (make-instance 'button
-                                             :master hard-frame
-                                             :command (lambda() (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox)))))
+                                      :master hard-frame
+                                      :text "Search"
+                                      :command (lambda() (hard-search (text hard-search-entry) *country-names* (listbox countries-listbox)))))
           (dynamic-search-button (make-instance 'button
                                                 :master dynamic-frame
+                                                :text "Search"
                                                 :command (lambda() (dynamic-search)))))
      (grid frame 0 0)
      (grid selection-frame 0 1 :rowspan 3 :padx 10 :pady 10)
      (grid hard-frame 0 2 :rowspan 3 :padx 10 :pady 10)
      (grid dynamic-frame 0 3 :rowspan 3 :padx 10 :pady 10)
      (grid countries-listbox 0 0 :rowspan 5)
-     (grid (make-instance 'label
-                          :text "Country selected: "
-                          :master frame)  0  1)
-     (grid country-seleciton  1  1)
+     (grid country-selection-label  0  1)
+     (grid country-seleciton  1  1 :rowspan 2)
      (grid hard-search-label  0  2)
      (grid dynamic-search-label  0  3)
      (grid hard-search-entry  1  2 :pady 10)
@@ -88,6 +91,10 @@
      (grid hard-search-button  2  2)
      (grid dynamic-search-button  2  3)
      (listbox-append countries-listbox *country-names*)
+     (configure selection-frame :relief :raised :borderwidth 2)
+     (configure hard-frame :relief :raised :borderwidth 2)
+     (configure dynamic-frame :relief :raised :borderwidth 2)
+     (grid-rowconfigure selection-frame 3 :weight 3)
 
      (bind (listbox countries-listbox) "<Double-1>" (lambda(evt) (setf (text country-seleciton)  (nth (first (listbox-get-selection countries-listbox)) *country-names*))))
      (highlight-skip-one-item countries-listbox *country-names*))))
