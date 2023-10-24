@@ -57,6 +57,8 @@ Based on the first two digits from the *.lisp files you can find:
 14. Geometry Manager
 
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/7b6565b1-f0cf-4503-bdb8-be6ddfd7e34a)
+
+- If you are interested in how the styling was made, there is an incremental excalidraw list [here](https://github.com/art3xias23/clisp-ltk-tutorials/commit/5818a598cbf97424909654fdc2d23c031cb7c475#commitcomment-130594774)
 ------
 
 15. Scrolled-Listbox
@@ -89,8 +91,7 @@ Based on the first two digits from the *.lisp files you can find:
 
 
 ### Notes
-- If you are interested in how the styling was made, there is an incremental excalidraw list [here](https://github.com/art3xias23/clisp-ltk-tutorials/commit/5818a598cbf97424909654fdc2d23c031cb7c475#commitcomment-130594774)
-- Or a bit more on the :relief argument can be found [here](https://github.com/art3xias23/clisp-ltk-tutorials/commit/94fe6a44f384314cb36d71f69f2cf3d382ec4b3d#commitcomment-130321349)
+- A bit more on the :relief argument can be found [here](https://github.com/art3xias23/clisp-ltk-tutorials/commit/94fe6a44f384314cb36d71f69f2cf3d382ec4b3d#commitcomment-130321349)
 
 
 
