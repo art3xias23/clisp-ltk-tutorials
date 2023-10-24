@@ -9,7 +9,7 @@
 (defun func ()
   (with-ltk ()
     (wm-title *tk* "Scrollbar example.lisp")
-    (let ((listbox (make-instance 'listbox :height 5))
+    (let ((listbox (make-instance 'listbox :height 15))
           (scrollbar (make-instance 'scrollbar :orientation :vertical))
           (status (make-instance 'label :text "Status message here")))
       (grid listbox 0 0 :sticky "nwes")
@@ -19,6 +19,9 @@
                 :command (format NIL "~a yview" (widget-path listbox)))
       (configure listbox
                :yscrollcommand (format NIL "~a set" (widget-path scrollbar)))
+
+      (grid-columnconfigure *tk* 0 :weight 11)
+      (grid-rowconfigure *tk* 0 :weight 2)
       (dotimes (i 100)
         (listbox-append listbox (format NIL "Line ~a of 100" i))))))
 
