@@ -79,6 +79,11 @@ Based on the first two digits from the *.lisp files you can find:
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/de56306c-d7e2-4e04-80db-ade5ed0403ba)
 ------
 
+19. Spinbox
+
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/15d52983-2556-4f49-91f5-a21b2e2fd472)
+------
+
 
 
 
