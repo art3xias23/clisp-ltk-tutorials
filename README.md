@@ -74,6 +74,12 @@ Based on the first two digits from the *.lisp files you can find:
 ![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/78905abd-b2c9-4dc0-bce3-1209a7f38b88)
 ------
 
+18. Scale
+
+![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/de56306c-d7e2-4e04-80db-ade5ed0403ba)
+------
+
+
 
 
 
