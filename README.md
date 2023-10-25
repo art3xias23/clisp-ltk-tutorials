@@ -87,8 +87,9 @@ Based on the first two digits from the *.lisp files you can find:
 ------
 
 20. ProgressBar
+    
+![ezgif-1-eb467229c1](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/9b121954-4b0f-4f6b-be6d-ac5c96c60e50)
 
-![image](https://github.com/art3xias23/clisp-ltk-tutorials/assets/23562239/1e28c6a6-df27-4390-8198-6bc0948e3528)
 ------
 
 
