@@ -38,7 +38,14 @@
                                    (result 42)
                                    (next (1+ count)))))))
               (result (answer)
-                (configure progressbar :value)))))))
+                (configure progressbar :value 0)
+                (setf (text button) "Start!"
+                      (command button) #'start)
+                (setf (text label)
+                      (if (numberp answer)
+                          (format NIL "Answer: ~a" answer)
+                          "No Answer"))))
+       (setf (command button) #'start)))))
 
      
 
