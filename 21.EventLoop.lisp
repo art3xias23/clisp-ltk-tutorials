@@ -18,7 +18,27 @@
                                      :maximum 20)))
      (grid button 0 1 :padx 5 :pady 5)
      (grid label 0 0 :padx 5 :pady 5)
-     (grid progressbar 1 0 :padx 5 :pady 5))))
+     (grid progressbar 1 0 :padx 5 :pady 5)
+
+     (labels ((start ()
+                (setf (text button) "Stop!"
+                      (command button) #'stop)
+                (setf (text label) "Working ...")
+                (setf interrupt nil)
+                (after 1 #'next))
+              (stop()
+                  (setf interrupt t))
+              (next (&optional (count 0))
+                (configure progressbar :value count)
+                (if interrupt
+                    (result "")
+                    (after 100
+                           #'(lambda ()
+                               (if (= count 20)
+                                   (result 42)
+                                   (next (1+ count)))))))
+              (result (answer)
+                (configure progressbar :value)))))))
 
      
 
